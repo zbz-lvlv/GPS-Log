@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		5DF4412B1FBC47A30044A738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4412A1FBC47A30044A738 /* AppDelegate.swift */; };
-		5DF4412D1FBC47A30044A738 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4412C1FBC47A30044A738 /* FirstViewController.swift */; };
-		5DF4412F1FBC47A30044A738 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4412E1FBC47A30044A738 /* SecondViewController.swift */; };
+		5DF4412D1FBC47A30044A738 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4412C1FBC47A30044A738 /* DataViewController.swift */; };
 		5DF441321FBC47A30044A738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF441301FBC47A30044A738 /* Main.storyboard */; };
 		5DF441341FBC47A30044A738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF441331FBC47A30044A738 /* Assets.xcassets */; };
 		5DF441371FBC47A30044A738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF441351FBC47A30044A738 /* LaunchScreen.storyboard */; };
 		5DF441421FBC47A30044A738 /* GPS_LogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF441411FBC47A30044A738 /* GPS_LogTests.swift */; };
 		5DF4414D1FBC47A40044A738 /* GPS_LogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4414C1FBC47A40044A738 /* GPS_LogUITests.swift */; };
+		5DF4415B1FBC51350044A738 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4415A1FBC51350044A738 /* TabBarViewController.swift */; };
+		5DF4415D1FBC52C60044A738 /* DateTimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4415C1FBC52C60044A738 /* DateTimeProvider.swift */; };
+		5DF4415F1FBC52D40044A738 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4415E1FBC52D40044A738 /* LocationProvider.swift */; };
+		5DF441611FBC52E30044A738 /* AltitudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF441601FBC52E30044A738 /* AltitudeProvider.swift */; };
+		5DF441631FBC52EE0044A738 /* SunProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF441621FBC52EE0044A738 /* SunProvider.swift */; };
+		5DF441651FBC530F0044A738 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF441641FBC530F0044A738 /* DataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +42,7 @@
 /* Begin PBXFileReference section */
 		5DF441271FBC47A30044A738 /* GPS Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPS Log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF4412A1FBC47A30044A738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5DF4412C1FBC47A30044A738 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		5DF4412E1FBC47A30044A738 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5DF4412C1FBC47A30044A738 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		5DF441311FBC47A30044A738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DF441331FBC47A30044A738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DF441361FBC47A30044A738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		5DF441481FBC47A40044A738 /* GPS LogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPS LogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF4414C1FBC47A40044A738 /* GPS_LogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS_LogUITests.swift; sourceTree = "<group>"; };
 		5DF4414E1FBC47A40044A738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DF4415A1FBC51350044A738 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5DF4415C1FBC52C60044A738 /* DateTimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeProvider.swift; sourceTree = "<group>"; };
+		5DF4415E1FBC52D40044A738 /* LocationProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
+		5DF441601FBC52E30044A738 /* AltitudeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AltitudeProvider.swift; sourceTree = "<group>"; };
+		5DF441621FBC52EE0044A738 /* SunProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunProvider.swift; sourceTree = "<group>"; };
+		5DF441641FBC530F0044A738 /* DataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				5DF4412A1FBC47A30044A738 /* AppDelegate.swift */,
-				5DF4412C1FBC47A30044A738 /* FirstViewController.swift */,
-				5DF4412E1FBC47A30044A738 /* SecondViewController.swift */,
+				5DF4415A1FBC51350044A738 /* TabBarViewController.swift */,
+				5DF4415C1FBC52C60044A738 /* DateTimeProvider.swift */,
+				5DF4415E1FBC52D40044A738 /* LocationProvider.swift */,
+				5DF441601FBC52E30044A738 /* AltitudeProvider.swift */,
+				5DF441621FBC52EE0044A738 /* SunProvider.swift */,
+				5DF4412C1FBC47A30044A738 /* DataViewController.swift */,
+				5DF441641FBC530F0044A738 /* DataView.swift */,
 				5DF441301FBC47A30044A738 /* Main.storyboard */,
 				5DF441331FBC47A30044A738 /* Assets.xcassets */,
 				5DF441351FBC47A30044A738 /* LaunchScreen.storyboard */,
@@ -265,9 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DF4412F1FBC47A30044A738 /* SecondViewController.swift in Sources */,
+				5DF4415B1FBC51350044A738 /* TabBarViewController.swift in Sources */,
+				5DF4415D1FBC52C60044A738 /* DateTimeProvider.swift in Sources */,
 				5DF4412B1FBC47A30044A738 /* AppDelegate.swift in Sources */,
-				5DF4412D1FBC47A30044A738 /* FirstViewController.swift in Sources */,
+				5DF4412D1FBC47A30044A738 /* DataViewController.swift in Sources */,
+				5DF441631FBC52EE0044A738 /* SunProvider.swift in Sources */,
+				5DF441611FBC52E30044A738 /* AltitudeProvider.swift in Sources */,
+				5DF441651FBC530F0044A738 /* DataView.swift in Sources */,
+				5DF4415F1FBC52D40044A738 /* LocationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
