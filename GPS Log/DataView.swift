@@ -14,25 +14,37 @@ enum Side {
 }
 
 class DataView : UIView{
+
+    static let VIEW_HEIGHT = 18;
+    static let HOTIZONTAL_MARGIN = 8;
     
-    static let SCREEN_WIDTH = UIScreen.main.bounds.size.width
-    static let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
-    static let VIEW_HEIGHT = 20;
+    var labelDescription: UILabel!
+    var labelValue: UILabel!
     
-    init(frameIn: CGRect, index: Int) {
+    var name = ""
+    
+    init(index: Int, name: String) {
         
-        super.init(frame: frameIn)
+        self.name = name;
         
-        let labelDescription = UILabel();
+        let frameView = CGRect(x: Double(0), y: Double(20 + index * DataView.VIEW_HEIGHT), width: Double(Constants
+            .SCREEN_WIDTH), height: Double(DataView.VIEW_HEIGHT))
+        
+        super.init(frame: frameView)
+        
+        labelDescription = UILabel();
         labelDescription.font = UIFont(name: "Verdana", size: 17)
+        labelDescription.textColor = Constants.FOREGROUND_COLOR
         labelDescription.text = "Description"
+        labelDescription.frame = CGRect(x: CGFloat(DataView.HOTIZONTAL_MARGIN), y: CGFloat(DataView.HOTIZONTAL_MARGIN + DataView.VIEW_HEIGHT * index), width: Constants.SCREEN_WIDTH / 2 - CGFloat(DataView.HOTIZONTAL_MARGIN), height: CGFloat(DataView.VIEW_HEIGHT))
         self.addSubview(labelDescription)
         
-        let labelValue = UILabel();
+        labelValue = UILabel();
         labelValue.font = UIFont(name: "Verdana", size: 17)
+        labelValue.textColor = Constants.FOREGROUND_COLOR
         labelValue.text = "Value"
         labelValue.textAlignment = .right
-        labelValue.frame = CGRect(x: DataView.SCREEN_WIDTH / 2, y: CGFloat(8 + DataView.VIEW_HEIGHT * index), width: DataView.SCREEN_WIDTH / 2 - 20, height: CGFloat(VIEW_HEIGHT))
+        labelValue.frame = CGRect(x: Constants.SCREEN_WIDTH / 2, y: CGFloat(DataView.HOTIZONTAL_MARGIN + DataView.VIEW_HEIGHT * index), width: Constants.SCREEN_WIDTH / 2 - CGFloat(DataView.HOTIZONTAL_MARGIN), height: CGFloat(DataView.VIEW_HEIGHT))
         self.addSubview(labelValue)
         
     }

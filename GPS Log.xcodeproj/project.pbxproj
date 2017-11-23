@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0F0CE61FC67799005008FF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0F0CE51FC67799005008FF /* CoreLocation.framework */; };
+		5D0F0CEC1FC6EC78005008FF /* Geoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0F0CEB1FC6EC78005008FF /* Geoid.swift */; };
+		5D2149C41FC4650E002D6264 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2149C31FC4650E002D6264 /* Constants.swift */; };
 		5DF4412B1FBC47A30044A738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4412A1FBC47A30044A738 /* AppDelegate.swift */; };
 		5DF4412D1FBC47A30044A738 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4412C1FBC47A30044A738 /* DataViewController.swift */; };
 		5DF441321FBC47A30044A738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF441301FBC47A30044A738 /* Main.storyboard */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D0F0CE51FC67799005008FF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5D0F0CEB1FC6EC78005008FF /* Geoid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geoid.swift; sourceTree = "<group>"; };
+		5D2149C31FC4650E002D6264 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5DF441271FBC47A30044A738 /* GPS Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPS Log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF4412A1FBC47A30044A738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DF4412C1FBC47A30044A738 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D0F0CE61FC67799005008FF /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D0F0CE41FC67799005008FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D0F0CE51FC67799005008FF /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5DF4411E1FBC47A30044A738 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +108,7 @@
 				5DF441401FBC47A30044A738 /* GPS LogTests */,
 				5DF4414B1FBC47A40044A738 /* GPS LogUITests */,
 				5DF441281FBC47A30044A738 /* Products */,
+				5D0F0CE41FC67799005008FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +133,8 @@
 				5DF441621FBC52EE0044A738 /* SunProvider.swift */,
 				5DF4412C1FBC47A30044A738 /* DataViewController.swift */,
 				5DF441641FBC530F0044A738 /* DataView.swift */,
+				5D2149C31FC4650E002D6264 /* Constants.swift */,
+				5D0F0CEB1FC6EC78005008FF /* Geoid.swift */,
 				5DF441301FBC47A30044A738 /* Main.storyboard */,
 				5DF441331FBC47A30044A738 /* Assets.xcassets */,
 				5DF441351FBC47A30044A738 /* LaunchScreen.storyboard */,
@@ -282,12 +300,14 @@
 			files = (
 				5DF4415B1FBC51350044A738 /* TabBarViewController.swift in Sources */,
 				5DF4415D1FBC52C60044A738 /* DateTimeProvider.swift in Sources */,
+				5D0F0CEC1FC6EC78005008FF /* Geoid.swift in Sources */,
 				5DF4412B1FBC47A30044A738 /* AppDelegate.swift in Sources */,
 				5DF4412D1FBC47A30044A738 /* DataViewController.swift in Sources */,
 				5DF441631FBC52EE0044A738 /* SunProvider.swift in Sources */,
 				5DF441611FBC52E30044A738 /* AltitudeProvider.swift in Sources */,
 				5DF441651FBC530F0044A738 /* DataView.swift in Sources */,
 				5DF4415F1FBC52D40044A738 /* LocationProvider.swift in Sources */,
+				5D2149C41FC4650E002D6264 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +560,7 @@
 				5DF441531FBC47A40044A738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DF441541FBC47A40044A738 /* Build configuration list for PBXNativeTarget "GPS LogTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +569,7 @@
 				5DF441561FBC47A40044A738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DF441571FBC47A40044A738 /* Build configuration list for PBXNativeTarget "GPS LogUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +578,7 @@
 				5DF441591FBC47A40044A738 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
