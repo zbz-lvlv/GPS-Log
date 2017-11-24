@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DataViewController: UIViewController {
+class DataViewController: UIViewController, UIAlertViewDelegate {
 
     var views = [DataView]();
     var foregroundColor: UIColor!
@@ -81,6 +81,28 @@ class DataViewController: UIViewController {
         }
         
     }
+    
+    func showTextfield(title: String, message: String){
+        
+        var alert = UIAlertView(title: title, message: message, delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "OK")
+        alert.alertViewStyle = .plainTextInput
+        alert.show()
+        
+    }
+    
+    func alertView(_ alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
+        
+        if(buttonIndex == 1){
+            
+            if let value = (alertView.textField(at: 0)?.text)!.doubleValue  {
+                AltitudeProvider.seaLevelPressure = value
+            } else {
+                print("invalid input")
+            }
+            
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -97,4 +119,14 @@ enum PointerType{
     
 }
 
-
+extension String {
+    var doubleValue: Double? {
+        return Double(self)
+    }
+    var floatValue: Float? {
+        return Float(self)
+    }
+    var integerValue: Int? {
+        return Int(self)
+    }
+}

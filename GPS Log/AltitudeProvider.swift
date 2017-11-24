@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreMotion
+import UIKit
 
 class AltitudeProvider{
     
@@ -46,12 +47,18 @@ class AltitudeProvider{
         initView(viewName: "BaroAlt")
         altitudeViewController.setLabel(viewName: "BaroAlt", side: Side.Description, value: "Barometric Altitude:")
         
+        initView(viewName: "SeaLevelPres")
+        altitudeViewController.setLabel(viewName: "SeaLevelPres", side: Side.Description, value: "Sea Level Pressure:")
+        
         altitudeViewController.addCanvas(imageName: "altimeter.png")
         altitudeViewController.addPointer(pointerType: PointerType.Long, pointerTypeString: "long_pointer.png") //10m per separation
         altitudeViewController.addPointer(pointerType: PointerType.Medium, pointerTypeString: "medium_pointer.png") //100m per separation
         altitudeViewController.addPointer(pointerType: PointerType.Short, pointerTypeString: "short_pointer.png") //1000m per separation
         
         initBarometer()
+        
+        //Adjust pressure at sea level
+        altitudeViewController.view.addGestureRecognizer(UISwipeGestureRecognizer(target:self, action:#selector(changePASL)))
         
     }
     
@@ -77,6 +84,7 @@ class AltitudeProvider{
             altitudeViewController.setLabel(viewName: "GPSAltNoGeoid", side: Side.Value, value: altitudeToString(altitude: location.altitudeNoGeoid))
             altitudeViewController.setLabel(viewName: "BaroPres", side: Side.Value, value: airPressureToString(airPressure: airPressure))
             altitudeViewController.setLabel(viewName: "BaroAlt", side: Side.Value, value: altitudeToString(altitude: pressureAltitude))
+            altitudeViewController.setLabel(viewName: "SeaLevelPres", side: Side.Value, value: airPressureToString(airPressure: AltitudeProvider.seaLevelPressure))
             
             //Update canvas
             altitudeViewController.updatePointer(pointerType: PointerType.Long, angleInRadians: location.altitude / 100 * 2 * Double.pi)
@@ -144,6 +152,12 @@ class AltitudeProvider{
     
     func airPressureToString(airPressure: Double) -> String{
         return String(format: "%.2f", airPressure) + "mb"
+    }
+    
+    @objc func changePASL(){
+        
+        altitudeViewController.showTextfield(title: "Sea Level Pressure", message: "Current " + airPressureToString(airPressure: AltitudeProvider.seaLevelPressure))
+        
     }
     
     func initView(viewName: String){

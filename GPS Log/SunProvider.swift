@@ -25,7 +25,7 @@ class SunProvider{
         tabBarViewController.addViewController(title: "Sun", viewController: sunViewController)
         
         initView(viewName: "Sunrise")
-        sunViewController.setLabel(viewName: "Sunrise", side: Side.Description, value: "Sunrise::")
+        sunViewController.setLabel(viewName: "Sunrise", side: Side.Description, value: "Sunrise:")
         
         initView(viewName: "SolarNoon")
         sunViewController.setLabel(viewName: "SolarNoon", side: Side.Description, value: "Solar Noon:")
@@ -101,17 +101,34 @@ class SunProvider{
         
         let month = Calendar.current.component(.month, from: Date())
         
-        if(month == 3 || month == 4 || month == 5){
-            return "Spring"
+        //Northern hemisphere
+        if(location.latitude >= 0){
+            if(month == 3 || month == 4 || month == 5){
+                return "Spring"
+            }
+            else if(month == 6 || month == 7 || month == 8){
+                return "Summer"
+            }
+            else if(month == 9 || month == 10 || month == 11){
+                return "Autumn"
+            }
+            return "Winter"
         }
-        else if(month == 6 || month == 7 || month == 8){
+        
+        //Southern hemisphere
+        else{
+            if(month == 3 || month == 4 || month == 5){
+                return "Autumn"
+            }
+            else if(month == 6 || month == 7 || month == 8){
+                return "Winter"
+            }
+            else if(month == 9 || month == 10 || month == 11){
+                return "Spring"
+            }
             return "Summer"
         }
-        else if(month == 9 || month == 10 || month == 11){
-            return "Autumn"
-        }
-        return "Winter"
-        
+    
     }
     
     func calculateSun(lat: Double, long: Double, timezone: Double) -> [Double]{

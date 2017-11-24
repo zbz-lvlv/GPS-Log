@@ -15,7 +15,7 @@ enum Side {
 
 class DataView : UIView{
 
-    static let VIEW_HEIGHT = 18;
+    static let VIEW_HEIGHT = 20;
     static let HOTIZONTAL_MARGIN = 8;
     
     var labelDescription: UILabel!
